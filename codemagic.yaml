@@ -1,0 +1,22 @@
+workflows:
+  ios-workflow:
+    name: Build iOS App
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.minim.itanalysis
+      vars:
+        CAPACITOR_PROJECT_DIR: .
+      node: 18
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install
+      - name: Build web app
+        script: |
+          npm run build
+      - name: Copy web assets to iOS
+        script: |
+          npx cap sync ios
+    artifacts:
+      - build/ios/ipa/*.ipa
