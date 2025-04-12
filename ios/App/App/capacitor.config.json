@@ -1,0 +1,14 @@
+{
+	"appId": "com.minim.itanalysis",
+	"appName": "IT-Analyse",
+	"webDir": "dist",
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": false
+		}
+	},
+	"packageClassList": [
+		"CAPCameraPlugin",
+		"SplashScreenPlugin"
+	]
+}
